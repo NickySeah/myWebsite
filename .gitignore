@@ -1,0 +1,20 @@
+# Ignore all log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore build artifacts
+build/
+
+# Ignore node_modules directory for JavaScript projects
+node_modules/
+
+# Ignore environment variable file
+.env
+
+# Ignore all files and subdirectories within the .idea directory (common for IDE settings)
+.idea/
+
+# Include important.log file even though it matches *.log pattern
+!important.log
