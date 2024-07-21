@@ -2,6 +2,7 @@
     box-sizing: border-box; /* When Calculating width, include padding */
     margin: 0px;
     padding: 0px;
+
 }
 html, body{
     height: 100%;
@@ -12,24 +13,26 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    background-color: hsl(212, 92%, 39%);
+    background-color: whitesmoke;
     text-align: center;
-    padding: 40px;
+    padding: 1rem;
 }
 header .headerLogo{
     border-radius: 50%;
-    width: 10%;
+    width: 5%;
     height: auto;
+    margin-left: 2rem;
 
 }
 .navbar{
-    width: 20%;
+    width: 10%;
 
     background-color: inherit;
     text-align: center;
-    height:50px
+    height:auto;
+    margin-right: 2rem;
 }
-.topNavBar{
+.ListNavBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,8 +50,95 @@ header .headerLogo{
     flex-direction: column;
     min-height: 100vh;
 }
+
+.intro{
+    height: 24vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5rem;
+}
+
+.main1{
+    display: flex;
+}
+
+.pict{
+    width: 50%;
+    height: 50vh;
+}
+.text1{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsla(193, 61%, 46%, 0.473);
+
+    font-size: 5rem;
+    font-family: Roboto;
+    white-space: wrap;
+}
+.text2{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(256, 84%, 38%);
+    color: #ffffcc;
+
+    font-size: 5rem;
+    font-family: Roboto;
+    white-space: wrap;
+}
+.text3{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsla(220, 100%, 9%, 0.89);
+    color: lightgreen;
+
+    font-size: 5rem;
+    font-family: Roboto;
+    white-space: wrap;
+}
+.whitespace{
+    width: 100%;
+    height: 12vh;
+}
+
 footer{
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.151);
+    background-color: white;
     text-align: center;
     padding: 40px;
+}
+
+.fa-youtube{
+    color: red;
+}
+.fa-instagram{
+    color: pink;
+}
+.fa-linkedin{
+    color: blue;
 }
