@@ -1,230 +1,54 @@
-body{
-    background-color: black;
-}
-h1{
-    color: white;
-    font-family: tiny5, "consolas";/*Use google font*/
-
-    
-    border-top-style: dotted;
-    border-bottom-style: dotted;
-    border-left-style: double;
-    border-right-style: double;
-
-    border-top-color: red;
-    border-bottom-color: green;
-    border-left-color: #0000ff;
-    border-right-color: yellow;
-}
-p{
-    background-color: gray;
-    color: white;
-    /* Can list many fonts in case the browser does not support */
-    font-family: "consolas", sans-serif;
-    font-style: italic;
-    font-weight: 100;
-    text-decoration: blue dotted underline;
-    font-size: 20px;
-
-    border-style: solid;
-    border-width: 5px;
-    border-color: gold;
-    border-radius: 10px;
-    padding: 50px;/*space between border and text*/
-}
-
-.odd{
-    background-image: url("background.png");
-
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    border: 2px solid;
+*{
+    box-sizing: border-box; /* When Calculating width, include padding */
     margin: 0px;
-    font-family: tiny5;
+    padding: 0px;
 }
-.even{
-    background: linear-gradient(skyblue, pink);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: yellow;
-    text-align: justify; /* This makes the paragraph end at a certain point, can use left/right also */
-    text-indent: 2em; /* Indentation */
-    line-height: 1.5; /*  Makes space between lines in paragraph */
-    letter-spacing: 0.35em;
-    word-spacing: 0.1em;
-    font-weight: 600;
-    font-style: italic;
-    font-family: cursive, sans-serif, monospace;
+html, body{
+    height: 100%;
 }
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-
-.box1{
-    border: 5px solid;
-    width: 250px;
-    height: 250px;
-    font-size: 22px;
-    background: blue;
-    
-    border-radius: 180px; /*This makes it a circle*/
-    
-    padding: 50px;/*add 50 px between content and border*/
-
-    /*
-    margin-top: 50px; add 50 px on the top of border
-    can use percentage
-    can use (margin auto) to stick on left or right
-    but if u both left and right it will stay in the middle
-    */
-
-    margin: 50px auto; /*consist of top bottom left right*/
-}
-.box2{
-    border: 5px solid;
-    width: 250px;
-    height: 250px;
-    font-size: 22px;
-    background: paleturquoise;
-
-    text-shadow: 0px -5px 4px red, 0px 5px 4px blue;
-    /*           x-axis y-axis  spread  color*/
-    box-shadow: 10px 10px 20px white;
-    /*Can be used in pseudo classes*/
-}
-/*
-Float: right/left will gravitate all elements to the right including divs and text
-
-To stop float, use
-
-clear: right/left/both
-*/
-#box3{
-    border: 2px solid;
-    height: 600px;
-    width: 600px;
-    background-color: white;
-
-    position: relative;
-    bottom: 600px;
-    left: 700px;
-    /*
-    static position is default
-    relative is relative to some point of origin
-    absolute will search for any parent that are position non statically, if no parent, it will use viewport
-    fixed is just fixed to the viewport
-    sticky is it will stick to viewport after scrolling past it
-    */
-}
-#box4{
-    border: 2px solid;
-    height: 200px;
-    width: 200px;
-    background-color: lightcoral;
-
-    position: absolute;
-    top: 200px;
-    left: 200px;
-}
-#bottom a{
-    font-size: 100px;
-    position: relative;
-    bottom : 100px;
-    cursor : pointer;
-    text-decoration: none;
-}
-
-#bottom a:hover{
-    background-color: lightseagreen;
-}
-#bottom a:link{
-    color: white;
-}
-#bottom a:visited{
-    color: greenyellow;
-}
-#bottom a:active{
-    color: papayawhip;
-    background-color: red;
-}
-
-
-#wrapper{
-    overflow: hidden;
-}
-#twitter{
-    float: left;
-}
-#house{
-    float: left;
-}
-
-li{
-    color: white;
-    position: relative;
-    bottom: 10px; 
-    font-size: 50px;
-    list-style-type:armenian; /* You can make ul and ol look the same using css */
+    background-color: hsl(212, 92%, 39%);
     text-align: center;
-    list-style-position: inside; /* If put outside the numbering will be on the left */
-    list-style-image: url('./tick.png');
+    padding: 40px;
 }
-/*
-li:nth-child(1){
-    background-color: green;
+header .headerLogo{
+    border-radius: 50%;
+    width: 10%;
+    height: auto;
+
 }
-li:nth-child(odd){
-    background-color: green;
+.navbar{
+    width: 20%;
+
+    background-color: inherit;
+    text-align: center;
+    height:50px
 }
-li:nth-child(even){
-    background-color: green;
+.topNavBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-li:nth-child(2n){
-    background-color: green;
+.navbar ul{
+    list-style-type: none;
 }
-*/
-li:nth-child(2n+3){
-    background-color: green;
+.navbar ul li{
+    font-size: 1.5rem;
+    padding: 0.5rem;
 }
 
-.fa-house{
-    color: brown;
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.fa-twitter{
-    color: aqua;
-}
-.fa-youtube{
-    color: red;
-}
-
-
-#box5{
-    border: 4px solid;
-    border-color: aliceblue;
-    width: 250px;
-    height: 250px;
+footer{
     background-color: aqua;
     text-align: center;
-    font-size: 225px;
-
-    transform: translateX(220px);
-    transform: translateY(200px);
-    transform: translate(220px, 200px);
-    transform: rotateX(180deg);
-    transform: rotateY(180deg);
-    transform: rotateZ(180deg);
-    transform: scaleX(1);
-    transform: scaleY(1);
-    transform: scale(1, 2);
-    transform: matrix(1, 0, 0, 2, 50, 150);
-    /*
-    matrix parameters
-
-    scaleX
-    skewY
-    skewX
-    scaleY
-    translateX
-    translateY
-
-    */
+    padding: 40px;
 }
